@@ -2,11 +2,12 @@ FROM python:3.12-slim
 
 ARG UID=10001
 ARG GID=10001
-
+# add User for Docker
 RUN groupadd -g ${GID} appgroup \
  && useradd -m -u ${UID} -g ${GID} -s /usr/sbin/nologin appuser
 
 WORKDIR /app
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
