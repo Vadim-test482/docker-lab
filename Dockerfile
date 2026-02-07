@@ -1,6 +1,3 @@
 FROM alpine
-   
-  
-asdasd
 ENV CREATOR="Student"
 CMD echo "This image was created by $CREATOR"
